@@ -1,0 +1,31 @@
+POST http://localhost:3333/carro
+Content-Type: application/json
+
+{
+    "modelo": "DBS V12",
+    "marca": "Aston Martin",
+    "potencia": "510 hp"
+}
+
+###
+
+GET http://localhost:3333/carro
+
+###
+
+GET http://localhost:3333/carro?search=IFMS
+
+###
+
+PUT http://localhost:3333/carros/808acbe6-c87f-4a84-b5ed-50ec19021805
+Content-Type: application/json
+
+{
+    "modelo": "GT86",
+    "marca": "Toyota",
+    "potencia": "200"
+}
+
+###
+
+DELETE http://localhost:3333/carros/a924e1fe-af7d-4900-abf8-c557c6d9d843
