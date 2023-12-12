@@ -1,4 +1,4 @@
-POST http://localhost:3333/carro
+POST http://localhost:3333/esportivo
 Content-Type: application/json
 
 {
@@ -9,15 +9,15 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3333/carro
+GET http://localhost:3333/esportivo
 
 ###
 
-GET http://localhost:3333/carro?search=IFMS
+GET http://localhost:3333/esportivo?search=GT86
 
 ###
 
-PUT http://localhost:3333/carros/808acbe6-c87f-4a84-b5ed-50ec19021805
+PUT http://localhost:3333/esportivos/808acbe6-c87f-4a84-b5ed-50ec19021805
 Content-Type: application/json
 
 {
@@ -28,4 +28,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3333/carros/a924e1fe-af7d-4900-abf8-c557c6d9d843
+DELETE http://localhost:3333/esportivos/a924e1fe-af7d-4900-abf8-c557c6d9d843

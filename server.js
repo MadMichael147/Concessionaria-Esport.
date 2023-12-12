@@ -8,7 +8,7 @@ server.get('/', () => {
     return 'Rota padrão'
 })
 
-server.post('/carro', (request, reply) => {
+server.post('/esportivo', (request, reply) => {
 // Acessando dados do corpo da requisição
     const {modelo, marca, potencia} = request.body
 // Exibindo dados
@@ -24,18 +24,18 @@ server.post('/carro', (request, reply) => {
     return reply.status(201).send
 })
 
-server.get('/carro', (request) => {
+server.get('/esportivo', (request) => {
     const search = request.query.search
     console.log(search)
-    const carros = database.list(search)
-    console.log(carros)
-    return carros
+    const esportivos = database.list(search)
+    console.log(esportivos)
+    return esportivos
 })
 
-server.put('/carros/:id', (request, reply) => {
-    const carroId = request.params.id
+server.put('/esportivos/:id', (request, reply) => {
+    const esportivoId = request.params.id
     const {modelo, marca, potencia} = request.body
-    const carro = database.update(carroId, {
+    const esportivo = database.update(esportivoId, {
         modelo: modelo,
         marca: marca,
         potencia: potencia,
@@ -43,10 +43,10 @@ server.put('/carros/:id', (request, reply) => {
     return reply.status(204).send()
 })
 
-server.delete('/carros/:id', (request, reply) => {
-    const carroId = request.params.id
+server.delete('/esportivos/:id', (request, reply) => {
+    const esportivoId = request.params.id
 
-    database.delete(carroId)
+    database.delete(esportivoId)
 
     return reply.status(204).send()
 }) 
